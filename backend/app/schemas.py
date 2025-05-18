@@ -54,7 +54,6 @@ class ChatOut(ORMBase):
 class ChatResponse(BaseModel):
     message: str
     chat_history: list[str]
-    # latest_emotions: list[str]
 
 class ChatMessage(BaseModel):
 
