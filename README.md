@@ -6,7 +6,7 @@
 
 ## 🚀 Overview
 
-**Happy.me** is a full-stack AI chatbot that leverages real-time webcam-based emotion detection and conversational intelligence to deliver empathetic, multilingual, and context-aware experiences. The chatbot dynamically adjusts its responses based on the user’s detected emotions and provides features such as secure authentication and exportable chat history.
+**Happy.me** is a full-stack AI chatbot that leverages real-time webcam-based emotion detection and conversational intelligence to deliver empathetic, and context-aware experiences. The chatbot dynamically adjusts its responses based on the user’s detected emotions and provides features such as secure authentication and exportable chat history.
 
 ---
 
