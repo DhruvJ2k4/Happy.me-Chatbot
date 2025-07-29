@@ -13,8 +13,7 @@
 ## 🧠 Features
 
 - 🎥 Real-time facial emotion recognition via webcam
-- 💬 Emotion-aware GPT/Gemini conversational AI
-- 🌍 Multilingual support (English, Hindi, Spanish, French, etc.)
+- 💬 Emotion-aware Gemini conversational AI
 - 📤 Chat export as PDF and Word
 - 🔐 Secure JWT-based authentication
 - 📱 Responsive UI built with modern React stack
@@ -23,13 +22,13 @@
 
 ## 🏗️ Tech Stack
 
-| Layer     | Stack                                 |
-|-----------|----------------------------------------|
-| Frontend  | Next.js, TypeScript, Tailwind CSS      |
-| Backend   | FastAPI (Python), SQLite/PostgreSQL    |
-| AI Model  | GPT-4 or Gemini Pro (via API)          |
-| ML Model  | CNN-based emotion detection using OpenCV |
-| Export    | ReportLab, python-docx for file export |
+| Layer                  | Stack                                    |
+|------------------------|------------------------------------------|
+| Frontend               | Next.js, TypeScript, Tailwind CSS        |
+| Backend                | FastAPI (Python), SQLite/PostgreSQL      |
+| Chatbot Model          | Gemini API, NLTK, Spacy                  |
+| Computer Vision Model  | CNN-based emotion detection using PyTorch|
+| Export                 | ReportLab, python-docx for file export   |
 
 ---
 
@@ -52,17 +51,6 @@ Happy.me-Chatbot/
     └── public/
 ```
 
-## Tech Stack
-
-| Layer    | Stack                                                     |
-|----------|-----------------------------------------------------------|
-| Frontend | Next.js, TypeScript, Tailwind CSS                         |
-| Backend  | FastAPI (Python), SQLite/PostgreSQL                       |
-| AI Model | GPT‑4 or Gemini Pro (via API)                             |
-| ML Model | CNN‑based emotion detection using OpenCV                  |
-| Export   | ReportLab, python‑docx for file export                    |
----
-
 ## ⚙️ Installation
 
 ### Backend
@@ -72,7 +60,6 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # For Windows: venv\Scripts\activate
 pip install -r requirements.txt
-cp .env.example .env  # Fill in your environment values
 ```
 
 ### Frontend
@@ -80,7 +67,6 @@ cp .env.example .env  # Fill in your environment values
 ```bash
 cd frontend
 yarn install
-cp .env.local.example .env.local  # Add required frontend environment variables
 ```
 
 ---
@@ -101,12 +87,6 @@ cd frontend
 yarn dev
 ```
 
-### Optional: Streamlit Dashboard
-
-```bash
-cd backend
-streamlit run app/streamlit_app.py
-```
 
 ---
 
@@ -125,35 +105,11 @@ ALLOWED_ORIGINS=http://localhost:3000
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
----
-
-## 🌐 Multilingual Support
-
-Multilingual chat translation is handled using:
-- `react-i18next` in frontend
-- `googletrans` in backend
-
-Supported languages include English, Hindi, Spanish, French, and more.
-
----
-
 ## 💬 Emotion-Aware AI Chatbot
 
 - Emotion is detected from the user’s webcam stream
 - Chat prompts are generated with emotional context
-- Supports OpenAI’s GPT or Google’s Gemini as backend
-
----
-
-## 📤 Chat Export Feature
-
-Users can download chat logs as:
-- PDF via ReportLab
-- Word (.docx) via python-docx
-
-Backend processes messages and returns downloadable files on request.
-
----
+- Supports Google’s Gemini as backend
 
 ## 🐳 Docker Support
 
@@ -177,29 +133,10 @@ services:
       - ./frontend/.env.local
 ```
 
----
-
-## 🧪 Development Standards
-
-- **Linting**: `black`, `flake8`, `eslint`, `prettier`
-- **Testing**:
-  - Backend: `pytest`
-  - Frontend: `yarn test`
-- **Branching**:
-  - `main`: production
-  - `dev`: active development
-  - `feature/*`: feature-specific branches
-
----
-
 ## 🛣️ Roadmap
 
 - [ ] Text-to-speech audio replies
 - [ ] Emotion trend visualization
-- [ ] Push notifications
-- [ ] Admin analytics dashboard
-- [ ] PostgreSQL migration and CI/CD support
-
 ---
 
 ## 🤝 Contributing
@@ -216,6 +153,4 @@ services:
 MIT License © 2024
 
 ## ✍️ Authors
-[Varun Selvakumar](https://github.com/VARUNSELVAKUMAR)
 [Dhruv Kalpesh Jadav](https://github.com/DhruvJ2k4)
-[Karan Bihani](https://github.com/karanbihani)
